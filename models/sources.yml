@@ -1,7 +1,5 @@
 version: 2
 
-version: 2
-
 sources:
   - name: airlines
     description: "Airlines raw flights data"
@@ -10,3 +8,15 @@ sources:
     tables:
       - name: airlines_r_raw
         description: "Raw flights data table"
+
+sources:
+  - name: weather_data
+    description: "Weather raw data sources"
+    database: jalapeno_joins
+    schema: s_nishantsingh
+    tables:
+      - name: weather_hrly_pro_raw
+        description: "Raw hourly weather data"
+      - name: weather_daily_r_pro
+        description: "Raw daily weather data"
+
