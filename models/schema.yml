@@ -1,13 +1,8 @@
 version: 2
 
-sources:
-  - name: airlines
-    tables:
-      - name: flights
-
 models:
   - name: flights_summary
-    description: "Summary of flights by carrier"
+    description: "Summary of flights by carrier from airlines_r_raw"
     columns:
       - name: carrier
         tests:

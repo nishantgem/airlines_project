@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: airlines
+    description: "Airlines raw flights data from Postgres"
+    schema: public
+    tables:
+      - name: airlines_r_raw
+        description: "Raw flights data table"
