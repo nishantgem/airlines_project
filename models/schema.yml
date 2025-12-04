@@ -1,15 +1,16 @@
 version: 2
 
 models:
-  - name: flights_summary
-    description: "Summary of flights by carrier from airlines_r_raw"
+  - name: stg_airlines
+    description: "Staging model selecting all columns from airlines_r_raw"
     columns:
+      - name: flight_id
+        description: "Unique identifier for each flight"
       - name: carrier
-        tests:
-          - not_null
-      - name: total_flights
-        tests:
-          - not_null
-      - name: avg_arrival_delay
-        tests:
-          - not_null
+        description: "Airline carrier code"
+      - name: arr_delay
+        description: "Arrival delay in minutes"
+      - name: dep_delay
+        description: "Departure delay in minutes"
+      - name: flight_date
+        description: "Date of the flight"
