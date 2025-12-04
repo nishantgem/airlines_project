@@ -1,0 +1,12 @@
+airlines_profile:
+  target: dev
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: your_username
+      password: your_password
+      port: 5432
+      dbname: airlines_db
+      schema: public
+      threads: 4

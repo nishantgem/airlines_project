@@ -1,0 +1,20 @@
+version: 2
+
+sources:
+  - name: airlines
+    tables:
+      - name: flights
+
+models:
+  - name: flights_summary
+    description: "Summary of flights by carrier"
+    columns:
+      - name: carrier
+        tests:
+          - not_null
+      - name: total_flights
+        tests:
+          - not_null
+      - name: avg_arrival_delay
+        tests:
+          - not_null
