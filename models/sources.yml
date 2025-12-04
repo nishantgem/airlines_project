@@ -3,20 +3,18 @@ version: 2
 sources:
   - name: airlines
     description: "Airlines raw flights data"
-    database: jalapeno_joins   # your database name
+    database: jalapeno_joins   # adjust if your database is different
     schema: s_nishantsingh     # replace with the schema where airlines_r_raw actually lives
     tables:
       - name: airlines_r_raw
         description: "Raw flights data table"
 
-sources:
   - name: weather_data
     description: "Weather raw data sources"
     database: jalapeno_joins
     schema: s_nishantsingh
     tables:
-      - name: weather_hrly_pro_raw
-        description: "Raw hourly weather data"
       - name: weather_daily_r_pro
         description: "Raw daily weather data"
-
+      - name: weather_hrly_pro_raw
+        description: "Raw hourly weather data"
