@@ -17,7 +17,7 @@ flights_may AS (
         flight_date,
         SUM(CASE WHEN cancelled = 1 THEN 1 ELSE 0 END) AS cancelled_flights,
         SUM(CASE WHEN diverted = 1 THEN 1 ELSE 0 END)  AS diverted_flights
-    FROM {{ ref('prep_flights') }}
+    FROM {{ ref('prep_airlines') }}
     WHERE flight_date BETWEEN '2024-05-01' AND '2024-05-31'
     GROUP BY origin, flight_date
 ),
