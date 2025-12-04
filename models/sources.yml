@@ -1,9 +1,12 @@
 version: 2
 
+version: 2
+
 sources:
   - name: airlines
-    description: "Airlines raw flights data from Postgres"
-    schema: public
+    description: "Airlines raw flights data"
+    database: jalapeno_joins   # your database name
+    schema: s_nishantsingh     # replace with the schema where airlines_r_raw actually lives
     tables:
       - name: airlines_r_raw
         description: "Raw flights data table"
