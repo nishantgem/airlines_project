@@ -14,3 +14,26 @@ models:
         description: "Departure delay in minutes"
       - name: flight_date
         description: "Date of the flight"
+        version: 2
+
+models:
+  - name: stg_weather_daily
+    description: "Staging model selecting all columns from weather_daily_r_pro"
+    columns:
+      - name: date
+        description: "Date of the weather record"
+      - name: temperature
+        description: "Daily average temperature"
+      - name: precipitation
+        description: "Daily precipitation amount"
+
+  - name: stg_weather_hourly
+    description: "Staging model selecting all columns from weather_hrly_pro_raw"
+    columns:
+      - name: timestamp
+        description: "Timestamp of the weather record"
+      - name: temperature
+        description: "Hourly temperature"
+      - name: humidity
+        description: "Hourly humidity percentage"
+
