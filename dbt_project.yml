@@ -10,4 +10,9 @@ test-paths: ["tests"]
 
 models:
   airlines_project:
-    +materialized: view
+    staging:
+      +materialized: view
+    prep:
+      +materialized: view
+    mart:
+      +materialized: table
